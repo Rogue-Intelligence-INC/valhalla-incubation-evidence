@@ -1,0 +1,27 @@
+# Valhalla Incubation Evidence
+
+Evidence documents from the Valhalla directed-cultivation experiments:
+small-scale, fully controlled tests of whether capability can be shown to
+live in quad-core storage and spontaneously grown Tile/Stem network
+structure — with negative results reported alongside positive ones.
+
+## Documents
+
+- [Spontaneous Network Emergence, Training Scale, and Results](SPONTANEOUS_NETWORK_AND_SCALE.md)
+  — what grew, at what training scale, what the controlled batteries
+  showed, and what they did not show.
+- [Work Summary — 2026-10-31](WORK_SUMMARY_2026-10-31.md)
+  — model-decomposition audit, experiment implementation, Stem growth
+  fix, unified Fate metric repair, system health check, small
+  intelligence test, and the pre-registered next gate.
+
+## Current honest status
+
+- Quad-storage fact composition: **proven with controls** (unseen-symbol
+  generalization, teacher-off reload, clean ablation).
+- Spontaneously grown network structure: **observed and measurable**
+  (Tile saturation regime; graded Stem field topology).
+- Thought channel (global Fate fragment assembly): **generalizes in
+  form** (longer chains, interleaved chains, bridge completion).
+- Incubation gain over a blank control (G > 0): **not yet demonstrated**
+  in any battery. No intelligence claim is made.
