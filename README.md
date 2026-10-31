@@ -7,6 +7,9 @@ structure — with negative results reported alongside positive ones.
 
 ## Documents
 
+- [Explanation](EXPLANATION.md) — the whole engineering explained clearly:
+  components, the information-form chain, experiment design, results,
+  how to run, and pre-registered next gates.
 - [Spontaneous Network Emergence, Training Scale, and Results](SPONTANEOUS_NETWORK_AND_SCALE.md)
   — what grew, at what training scale, what the controlled batteries
   showed, and what they did not show.
@@ -14,6 +17,18 @@ structure — with negative results reported alongside positive ones.
   — model-decomposition audit, experiment implementation, Stem growth
   fix, unified Fate metric repair, system health check, small
   intelligence test, and the pre-registered next gate.
+
+## Code
+
+- [`code/valhalla_relation_incubate.rs`](code/valhalla_relation_incubate.rs)
+  — the complete experiment (cultivation, A/B/C/D/E groups, three
+  answering channels, cross-ablations, small intelligence test).
+- [`code/monitor.rs`](code/monitor.rs) — the body monitor
+  (spontaneous-network observation).
+
+The main Valhalla codebase lives in
+[Rogue-Intelligence-INC/Valhalla](https://github.com/Rogue-Intelligence-INC/Valhalla);
+see the file map in the [Explanation](EXPLANATION.md).
 
 ## Current honest status
 
