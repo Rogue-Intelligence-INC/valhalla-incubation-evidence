@@ -13,7 +13,8 @@ structure — with negative results reported alongside positive ones.
 - [Spontaneous Network Emergence, Training Scale, and Results](SPONTANEOUS_NETWORK_AND_SCALE.md)
   — what grew, at what training scale, what the controlled batteries
   showed, and what they did not show.
-- [Suite 3 — Incubation Causal Proof v1](SUITE3_CAUSAL_PROOF_SUMMARY.md) — F/G/H/I control groups over 5 seeds: complete-state persistence passed, structure causal contribution +27.3 pp, cultivated topology ties degree-matched random rewiring.`n- [Work Summary — 2026-10-31](WORK_SUMMARY_2026-10-31.md)
+- [Suite 3 — Incubation Causal Proof v1](SUITE3_CAUSAL_PROOF_SUMMARY.md) — F/G/H/I control groups over 5 seeds: complete-state persistence passed, structure causal contribution +27.3 pp, cultivated topology ties degree-matched random rewiring.
+- [Work Summary — 2026-10-31](WORK_SUMMARY_2026-10-31.md)
   — model-decomposition audit, experiment implementation, Stem growth
   fix, unified Fate metric repair, system health check, small
   intelligence test, and the pre-registered next gate.
