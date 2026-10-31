@@ -148,3 +148,200 @@ No changes to `PATENT_ACTION_CHECKLIST.md`; no training runs beyond the
 specified small cultivation; no intelligence claim made; removed
 assistant-invented APIs (from earlier sessions) were not reintroduced;
 storage lives only in the four quad cores.
+
+---
+
+# Part II — the rest of 2026-10-31 (08:16 → 10:12)
+
+## 9. Suite 2: 20-round novelty curriculum, GPU field on
+
+`valhalla_relation_incubate2`: chain length 3→8 across stages,
+branching from round 11, 25 chains/stage, per-round novelty so Fate
+discovery does not saturate. Stem field switched to GPU
+(`stem-cell` gained `features = ["native_cuda"]` in `hub-f64`;
+`field_device` reports `gpu`). Final morphology: 8,825 tiles,
+6,679 cells, 4,892 Stem merges, 4.39M field links, 70,600 stored
+items; Fate discovery 19→34 across rounds (no freeze under novelty),
+efficiency → 0.0006; average connection strength dilutes 0.73→0.31.
+Answering: storage exact; boolean gain G still 0; graded readout
+masked by Tile saturation (mean thought strength 0.999 in both
+bodies; strongest-fragment-on-chain 1/42). The Suite-1 fragment-
+strength advantage (C 34.7 vs A 1.5) did **not** reproduce at
+20 rounds (1.34 vs 1.47) and was retracted in the suite summary.
+Full record: `SUITE2_20ROUND_SUMMARY.md` (commit c3a1c07).
+
+Iteration verdict (per-round metrics added at the user's request):
+accumulation and reorganization confirmed every round (storage
+linear, merges monotone, connections superlinear); "strengthening"
+appears as organization volume and fragment field strength, not as
+average connection strength; Fate ignores repeated patterns by
+design (marginal-decline equation), and per-round novelty keeps
+discovery flowing. Information-form chain documented as evidence in
+`EXPLANATION.md`: raw bytes → container statistics → spatial
+containers → field deformation → organization → signal fragments →
+global-Fate thought assembly (which writes back and mutates the
+network). Evidence repo moved under the organization
+(Rogue-Intelligence-INC/valhalla-incubation-evidence); a personal
+copy remains because the token lacks `delete_repo` scope.
+
+## 10. Roadmap review (external ChatGPT analysis)
+
+Adopted: the G ≥ +15pp / L ≥ 10pp / multi-seed / confidence-interval
+scorecard discipline, the F/G/H/I control groups, and the phase
+ordering. Rejected or deferred, with reasons recorded: changing the
+standing test protocol (facts-as-premises stays; rule induction, if
+ever, is a separate new battery by the user's decision); benchmark
+adapters for SCAN/CLUTRR (self-generated analogues instead, labeled);
+MiniGrid (needs an action-output channel — an architecture decision,
+not an adapter); Bongard/ARC/CL-bench (deferred).
+
+## 11. The "remove the hardcoding" correction cycle
+
+Two assistant misreadings were built and then fully reverted on the
+user's corrections, and the record is kept because the revert *is*
+the finding:
+
+1. First misreading: Tile/Stem local thresholds replaced with
+   quantile formulas. Reverted.
+2. Second: structural decisions gated by global Fate (Tile connection
+   birth and Tile/Stem merges behind the cluster equation). A probe
+   (`valhalla_fate_decision_check`, live-Fate vs frozen-Fate) showed
+   decision feedback exists but the global equation drifts into a
+   universal veto under byte streams (coefficients saturate at the
+   ±10 clamps via the unnormalized gradient in `adapt()`; cultivated
+   synapse births fell to 0; a 5-round run slowed ~13×).
+3. User's correction, now the standing model: **structure change is
+   automatic; Fate does not instruct it.** Fate is the global
+   metric/state layer; its only structural influence is the
+   pre-existing efficiency → field-density channel in the user's own
+   code. All gating was reverted; libraries pass and the 5-round
+   baseline reproduces in 77 s. Kept from the episode (observation
+   side only): the monitor now counts connection births from
+   `propagate`'s own report instead of an activation heuristic, and
+   Stem links as the field wrote them. Root cause of the equation
+   drift is documented as a metric-layer issue, not fixed (user's
+   call pending).
+
+A full re-test followed: quad crates 8/8, fate-f64 7/7, Tile 4/4,
+Stem 8/8, monitor/storage/fate-storage/light-train checks pass,
+relation baseline restored.
+
+## 12. Suite 3: incubation causal proof (F/G/H/I × 5 seeds)
+
+New bin `valhalla_incubation_proof`; answering strictly on the
+structure channel so ablations can bite. Results (mean ± std):
+C 72.7, A 72.7, **F 72.7**, G-ablated 45.5, H-rewired 72.7,
+I-store-cleared 72.7 (all ±0.0). Established: **complete cultivated
+state (structure + Fate + stores) saves and restores with zero loss
+(F = C)** — first full-body persistence proof; structure is
+load-bearing (L = C−G = **+27.3 pp**); structure channel is
+storage-independent (I = C). Not established: cultivation gain
+**G = C−A = 0**, and topology specificity **C−H = 0** — a
+degree-matched random rewiring answers identically, so the grown
+structure currently works by **density, not cultivated topology**.
+Zero variance across seeds is a coarse-readout warning, not
+stability. Full record: `SUITE3_CAUSAL_PROOF_SUMMARY.md`.
+
+## 13. Industry-style battery (analogues, 5 seeds)
+
+New bin `valhalla_industry_battery`: T1 rule induction with facts
+withheld at test (ground truth = transitive closure of trained
+edges), T2 SCAN-style length generalization, T3 CLUTRR-style
+pedigree multi-hop, T4 continual learning. Two harness bugs were
+found and fixed before any number was trusted (symbol index
+overflow past the 676 two-letter limit; T1's first design saturating
+its own closure so no negative questions existed — rebuilt on
+disjoint chain families). Final pattern, identical in all four
+tests: **storage channel 100% everywhere; network channel has
+perfect recall and zero selectivity**, so every network score equals
+its battery's positive fraction (66.7 / 80.0 / 50.0 / 66.7).
+Continual learning on storage: BWT = 0 — the append-only quad stores
+genuinely do not forget or interfere at this scale. MiniGrid Memory,
+Bongard-LOGO and ARC-AGI were **not** run and are listed as blocked
+(no action/visual channels exist; an adapter would smuggle in the
+invention). Full record: `INDUSTRY_BATTERY_SUMMARY.md`.
+
+## 14. Test package
+
+All five bins plus the shared monitor were packaged in `code/` with
+`TEST_PACKAGE.md` (contents, install, run instructions, expected
+runtimes, headline results, pre-registered interpretation rules) and
+`run_tests.ps1` (one-shot runner, logs to `test_logs/`). The runner
+was executed end-to-end before shipping; a Windows PowerShell 5.1
+incompatibility (`Tee-Object -Encoding`) was found by that run and
+fixed. Stale code copies (monitor, Suite 1/2) were refreshed to match
+the main tree byte-for-byte.
+
+## 15. Investor decks v1.0 and v1.1
+
+- **v1.0** (from `Valhalla_Investor_Deck_EN_v0.5.pptx`, 21→24 slides):
+  three incubation slides inserted after Trainability (program;
+  established results 66/66 · F = C · +27.3 · BWT = 0 · 20-round
+  morphology; the open gate G = 0 · C−H = 0 · C > H pre-registered),
+  full-text pass (dates/version, evidence map, funding gate,
+  appendices), pages and section numbers re-sequenced.
+- **v1.1** (18 slides, restructured at the user's direction): only
+  Valhalla, led by the new paradigm — cover re-taglined, a dedicated
+  paradigm slide ("AI is trained. Valhalla is incubated."),
+  architecture page corrected to the standing model (Fate = global
+  metric/state; the four Quad cores are the only storage), evidence
+  in the middle, one brief page for sub-lines, funding aligned to
+  the 27 Oct 2026 U.S. angel package ($750K target, $350K minimum
+  close). Dropped: deep-dive and duplicated slides; S-WIND / Yaksha /
+  Wave do not appear.
+- Tooling note: in this PowerPoint COM environment `Slide.Duplicate()`
+  returns null and `MoveTo` silently no-ops; the first v1.0 attempt
+  cross-wrote three slides and was discarded. The reliable method —
+  single-slide temp files + `InsertFromFile` with position
+  verification before any save — is what both final decks used.
+  Every new or edited slide was render-checked (PNG exports).
+
+## 16. Fusion experiment and Windows shell: document review
+
+Read in full: the fusion repo's README, both experiment summaries,
+and the checkpoint manifest; the Windows shell's README,
+`TRANSFORMER_USE.md`, and native source listing (local tree is the
+latest). Findings: TTS+LLM free fusion shows structure-layer
+emergence on the repo's own discovery metrics (64.5% over 107
+prompts, superadditivity 99–100%, POTENTIAL_CONFIRMED), and the
+decompose → fuse → bake pipeline demonstrably runs against
+Qwen2.5-0.5B. But the only like-for-like QA comparison has the fused
+bake **below** both references (102/145 vs 117/145 hybrid and
+115/145 prior baked, deficit in MCQ 15/46), and the documents
+themselves state the bake does not yet contain the fusion structure
+— so "enhances existing LLMs" is a demonstrated pipeline and an
+open milestone, not a result. The Windows shell is a real,
+locally built desktop artifact (knowledge import, OCR, gated
+computer control, model selection) and claims no SaaS/customers.
+The pitch's brief page was rewritten to exactly these boundaries
+(slide 13, "structure confirmed, QA open"). Full record:
+`FUSION_AND_SHELL_SUMMARY.md`.
+
+## 17. Day-close status
+
+**Established today, with controls:** storage-level fact composition
+and cross-ablation; complete cultivated-body persistence (F = C);
+grown structure is load-bearing (L = +27.3 pp); zero forgetting on
+the storage channel (BWT = 0); the unified Fate metric runs and is
+fed correctly; the decompose → fuse → bake pipeline and a native
+Windows shell exist and run locally.
+
+**Not established (the honest frontier):** cultivation gain
+G = C−A = 0 in every battery; cultivated topology indistinguishable
+from degree-matched random rewiring (C−H = 0); the grown network
+recalls everything and discriminates nothing on industry-shaped
+tests; LLM enhancement by fusion (QA below hybrid baseline, fusion
+structure not yet in the bake). **Next pre-registered gate: C > H**
+under a readout with signal resolution. No intelligence claim was
+made at any point today.
+
+**Deliverables index:** evidence repo commits 4d8affa → 9d46f29
+(documents: `EXPLANATION.md`, `SPONTANEOUS_NETWORK_AND_SCALE.md`,
+`SUITE2_20ROUND_SUMMARY.md`, `SUITE3_CAUSAL_PROOF_SUMMARY.md`,
+`INDUSTRY_BATTERY_SUMMARY.md`, `TEST_PACKAGE.md`,
+`FUSION_AND_SHELL_SUMMARY.md`, this summary; code: five test bins +
+monitor + runner in `code/`); decks
+`Valhalla_Investor_Deck_EN_v1.0.pptx` and `..._v1.1.pptx` (Desktop,
+with build scripts). Main Valhalla repo: new test bins registered
+and the Stem GPU feature flag; no library mechanisms redesigned;
+`PATENT_ACTION_CHECKLIST.md` untouched; nothing committed there.
