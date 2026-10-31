@@ -16,7 +16,9 @@ New-Item -ItemType Directory -Force "test_logs" | Out-Null
 
 function Run-Bin([string]$Name) {
     Write-Host "== $Name =="
-    cargo run -p hub-f64 --bin $Name 2>$null | Tee-Object -FilePath "test_logs\$Name.log" -Encoding utf8
+    $out = cargo run -p hub-f64 --bin $Name 2>$null
+    $out | ForEach-Object { Write-Host $_ }
+    $out | Set-Content -Path "test_logs\$Name.log" -Encoding utf8
 }
 
 # Fast causal/health layer first
