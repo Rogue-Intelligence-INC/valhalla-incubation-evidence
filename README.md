@@ -42,3 +42,4 @@ see the file map in the [Explanation](EXPLANATION.md).
 - Incubation gain over a blank control (G > 0): **not yet demonstrated**
   in any battery. No intelligence claim is made.
 
+
