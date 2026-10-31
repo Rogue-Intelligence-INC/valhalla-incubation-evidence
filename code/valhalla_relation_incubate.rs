@@ -106,7 +106,7 @@ impl Body {
         let t = self.tile.process_tiles_cycle();
         let s = self.stem.process_cells_cycle();
         self.stem.settle_field();
-        self.tile.propagate(1.0);
+        let p = self.tile.propagate(1.0); self.monitor.observe_propagate(p.new_connections);
         self.monitor.observe_cycle(&t, &s);
     }
     /// 迭代加强量：存储总量 / Stem 连接平均强度与最大强度（看每轮是不是在上一轮上加强）
@@ -494,10 +494,12 @@ fn main() {
     let mut body_a = Body::new(); // 空白组：等量无关字节
     let noise_words = ["lorem", "ipsum", "dolor", "amet", "velit", "sed", "tempor", "magna", "aliqua", "enim"];
 
-    println!("== 培养期（10 轮） ==");
+    let rounds: usize = std::env::var("VALHALLA_REL_ROUNDS")
+        .ok().and_then(|v| v.parse().ok()).unwrap_or(10);
+    println!("== 培养期（{rounds} 轮） ==");
     // 每轮内含三段：事实（链3单环）→ 成链（链4整链+单环）→ 反事实混喂
     let mut items_c = 0usize;
-    for round in 1..=10 {
+    for round in 1..=rounds {
         let t0 = std::time::Instant::now();
         for _ in 0..40 {
             let chain = shuffled_pool(&mut rng, &train_pool, 3);
@@ -851,6 +853,7 @@ fn main() {
     println!("C 与 A 若同分，说明组合动作目前由判读器+存储完成，培养的增益要看结构差与后续消融；");
     println!("D 与 C 同分说明能力随四元存储存盘存活；E 应全灭，否则存储之外还有来源。");
 }
+
 
 
 

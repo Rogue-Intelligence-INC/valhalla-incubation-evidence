@@ -1,10 +1,9 @@
 //! 训练时监控：Tile 组合、Stem 组合、自发连接、连通块。
 //!
 //! 只读身体当下的状态，不给块起名字，不看四路偏好。
-//! 规则对齐 `valhalla-self-incubate/DESIGN.md`：
 //! - 组合数来自周期结果（Tile 没有累计字段，由监控逐周期加上；Stem 另有 total_merges）
-//! - 自发边：权重 0.1、一端 |activation| > 0.5、另一端 > 0.3
-//! - Stem 连接：强度 > 0.01
+//! - 自发边：由 propagate 自己报的新连接数逐次累计，监控不另设阈值猜
+//! - Stem 连接：场写出的连接原样计数（强度为场按密度/距离/场强选出的原值）
 //! - 连通块：无向图连通分量，只报大小，不命名
 
 use std::collections::{HashMap, HashSet};
@@ -25,9 +24,9 @@ pub struct BodySnapshot {
     pub stem_merges: u64,
     /// Tile 无向边数
     pub tile_edges: usize,
-    /// 还满足自发形成条件的 Tile 边
+    /// propagate 累计报出的自发新连接数
     pub tile_synapses_born: usize,
-    /// Stem 强度 > 0.01 的连接条数
+    /// Stem 场写出的连接条数（原样强度）
     pub stem_links: usize,
     /// Tile 连通块大小，从大到小，只留 >= 2 的
     pub tile_blocks: Vec<usize>,
@@ -65,6 +64,7 @@ impl BodySnapshot {
 #[derive(Debug, Default)]
 pub struct BodyMonitor {
     tile_merges: usize,
+    synapses_born: usize,
 }
 
 impl BodyMonitor {
@@ -77,12 +77,18 @@ impl BodyMonitor {
         self.tile_merges += tile.merges;
     }
 
+    /// propagate 每报一次新连接就累计（监控不另设阈值猜哪条是新生的）
+    pub fn observe_propagate(&mut self, new_connections: usize) {
+        self.synapses_born += new_connections;
+    }
+
     pub fn snapshot(&self, tile: &TileQuattroComplete, stem: &StemCellComplete) -> BodySnapshot {
         let mut snap = BodySnapshot {
             tiles: tile.completed_tiles.len(),
             cells: stem.cells.len(),
             tile_merges: self.tile_merges,
             stem_merges: stem.total_merges,
+            tile_synapses_born: self.synapses_born,
             ..Default::default()
         };
 
@@ -96,7 +102,7 @@ impl BodyMonitor {
         let mut tile_pairs: HashSet<(usize, usize)> = HashSet::new();
         let mut tile_adj: Vec<Vec<usize>> = vec![Vec::new(); tile.completed_tiles.len()];
         for (i, t) in tile.completed_tiles.iter().enumerate() {
-            for (slot, peer) in t.connections.iter().enumerate() {
+            for peer in t.connections.iter() {
                 let Some(&j) = tile_index.get(peer.as_str()) else {
                     continue;
                 };
@@ -108,17 +114,12 @@ impl BodyMonitor {
                     tile_adj[i].push(j);
                     tile_adj[j].push(i);
                 }
-                let weight = t.weights.get(slot).copied().unwrap_or(0.0);
-                let other_act = tile.completed_tiles[j].activation;
-                if (weight - 0.1).abs() < 1e-9 && t.activation.abs() > 0.5 && other_act.abs() > 0.3 {
-                    snap.tile_synapses_born += 1;
-                }
             }
         }
         snap.tile_edges = tile_pairs.len();
         snap.tile_blocks = component_sizes(&tile_adj);
 
-        // Stem 边：connections 是 (cell_id, strength)。强度 > 0.01 才算
+        // Stem 边：connections 是 (cell_id, strength)，场选出的原样计数，只略过零强度
         let stem_index: HashMap<&str, usize> = stem
             .cells
             .iter()
@@ -128,7 +129,7 @@ impl BodyMonitor {
         let mut stem_adj: Vec<Vec<usize>> = vec![Vec::new(); stem.cells.len()];
         for (i, cell) in stem.cells.iter().enumerate() {
             for (peer, strength) in &cell.connections {
-                if *strength <= 0.01 {
+                if *strength <= 0.0 {
                     continue;
                 }
                 snap.stem_links += 1;
