@@ -13,6 +13,7 @@ structure — with negative results reported alongside positive ones.
 - [Spontaneous Network Emergence, Training Scale, and Results](SPONTANEOUS_NETWORK_AND_SCALE.md)
   — what grew, at what training scale, what the controlled batteries
   showed, and what they did not show.
+- [Fusion & Windows Shell Summary](FUSION_AND_SHELL_SUMMARY.md) — document-level review of the fusion experiment (protocol, 64.5% structure emergence, baked QA 102/145 vs 117/145 hybrid, the bake's admitted fusion gap) and the latest local Windows shell, plus the resulting pitch (v1.1) changes.
 - [Test Package](TEST_PACKAGE.md) — the complete runnable battery (all bins + monitor + one-shot runner in `code/`), with install/run instructions and pre-registered interpretation rules.
 - [Industry-Style Battery](INDUSTRY_BATTERY_SUMMARY.md) — SCAN/CLUTRR/continual-learning/rule-induction analogues over 5 seeds: storage channel exact everywhere; network channel has perfect recall and zero selectivity; MiniGrid/Bongard/ARC blocked (no such input/action channels).
 - [Suite 3 — Incubation Causal Proof v1](SUITE3_CAUSAL_PROOF_SUMMARY.md) — F/G/H/I control groups over 5 seeds: complete-state persistence passed, structure causal contribution +27.3 pp, cultivated topology ties degree-matched random rewiring.
