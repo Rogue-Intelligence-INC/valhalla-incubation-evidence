@@ -16,13 +16,20 @@ and the current technical report.
 
 ## Principal results
 
-**1. Structure carries the answer (causal, replicated at two scales).**
-On withheld multi-hop questions, trained bodies answer at 71–73% through
-self-formed structure. Removing every connection — stored bytes intact —
-returns all 15 seeds to a single 45.5% floor: **+25.7 pp**, replicated at
-**+27.4 ± 0.9 pp** after a 6.7× scale-up (200 symbols). Clearing stored
-bytes, by contrast, changes nothing. The effect is therefore attributable
-to the network, not to retrieval.
+**1. Structure carries the answer (causal).**
+On withheld multi-hop questions, trained bodies answer at **58.2 ± 4.8%**
+(200 symbols, 15 seeds) through self-formed structure. Removing every
+connection — stored bytes intact — returns all 15 seeds to a single
+45.5% floor: **+12.7 ± 4.8 pp, positive in 15/15 seeds**, with 76.1% of
+cross-chain questions correctly rejected. Clearing stored bytes, by
+contrast, changes nothing. The effect is therefore attributable to the
+network, not to retrieval. (An earlier +27.4 pp was measured under a
+build whose Stem field had lost its per-cell connection cap and
+saturated within one round; that build's structural results were
+retired and re-measured on 1 November 2026. Under the same corrected
+dynamics, the exposure learning curve at this scale is flat and the
+real topology scores below degree-matched random rewiring under
+hop-limited scoring — both reported as measured.)
 
 **2. One body, from ingress to egress (end-to-end, deterministic).**
 A single 20-round programme feeds facts, text, code, image and audio
@@ -36,7 +43,7 @@ and seed reproduce the run bit-for-bit.
 Whether chain-structured cultivation exceeds equal-volume unstructured
 exposure was written down as a test before it was run (200 symbols,
 6-link chains, ~3,600 facts, 15 seeds, three scoring instruments). The
-result was **+0.2 ± 1.4 pp** against a matched control. The curriculum
+result was **+0.1 ± 2.6 pp** against a matched control. The curriculum
 claim has been withdrawn; direction is attributed, on current evidence,
 to material selection and the Fate layer only.
 
