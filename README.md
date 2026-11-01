@@ -103,6 +103,13 @@ Independent third-party replication has not yet taken place.
   — canonical Tier-A metrics from the Python inference programme
   (U1–U4 4/4; U3 +38.7 pp; TPI 0.755; long-chain drift 0% / retention
   100%), retained with their protocol bounds.
+- [`evidence-20261101/DECOMPOSE_EVIDENCE_ASSESSMENT_20261101.md`](evidence-20261101/DECOMPOSE_EVIDENCE_ASSESSMENT_20261101.md)
+  — assessment of the LLM-decomposition enhancement line (graded
+  Class B: sham control missing, strength post-hoc) and the two-phase
+  plan to reproduce it on the Rust incubation body. An instrument
+  correction (unified scoring budget, replacing a per-label budget)
+  and its 15-seed re-run are recorded in TEST_RUNS (E0 section): all
+  headline values were reproduced under the corrected instrument.
 - [`deck/Valhalla_Investor_Deck_EN_v1.2_20261101.pptx`](deck/Valhalla_Investor_Deck_EN_v1.2_20261101.pptx)
   — the current technical report (29 slides, Scientific Edition):
   principal results first, experiments in full, evidence classification
