@@ -54,7 +54,12 @@ to material selection and the Fate layer only. A width variant
 not establish topology specificity: hard-negative rejection rose
 +23.8 pp (14/15 seeds) while true-pair path length never beat a
 degree-preserving shuffle (0/15) — recorded as not detected, with the
-component measurements published alongside (EVIDENCE_MAP D13).
+component measurements published alongside (EVIDENCE_MAP D13). A
+second attempt under a discrimination scale pre-declared for fresh
+seeds reached 11/15 against a 12/15 bar and likewise stands as not
+detected; a native closed-loop localisation test (stimulus through
+the body's own entry, silent-arm differential readout, two surface
+forms) also found nothing above chance (D14).
 
 ## Evidence classification
 
