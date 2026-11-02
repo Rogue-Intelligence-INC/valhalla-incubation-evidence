@@ -17,19 +17,23 @@ and the current technical report.
 ## Principal results
 
 **1. Structure carries the answer (causal).**
-On withheld multi-hop questions, trained bodies answer at **58.2 ± 4.8%**
-(200 symbols, 15 seeds) through self-formed structure. Removing every
-connection — stored bytes intact — returns all 15 seeds to a single
-45.5% floor: **+12.7 ± 4.8 pp, positive in 15/15 seeds**, with 76.1% of
-cross-chain questions correctly rejected. Clearing stored bytes, by
-contrast, changes nothing. The effect is therefore attributable to the
-network, not to retrieval. (An earlier +27.4 pp was measured under a
-build whose Stem field had lost its per-cell connection cap and
-saturated within one round; that build's structural results were
-retired and re-measured on 1 November 2026. Under the same corrected
-dynamics, the exposure learning curve at this scale is flat and the
-real topology scores below degree-matched random rewiring under
-hop-limited scoring — both reported as measured.)
+On withheld multi-hop questions, trained bodies answer at **72.2%**
+(200 symbols, 15 seeds; per-seed 71.2/72.7) through self-formed
+structure. Removing every connection — stored bytes intact — returns
+all 15 seeds to a single 45.5% floor: **+26.8 ± 0.7 pp, positive in
+15/15 seeds**; cross-chain false questions are correctly rejected at
+26.4% under the same geometry (the reachability instrument trades
+selectivity for sensitivity; both sides reported). Clearing stored
+bytes, by contrast, changes nothing. The effect is therefore
+attributable to the network, not to retrieval. (Earlier figures were
+retired twice: +27.4 pp under a build whose Stem field had lost its
+per-cell connection cap, then +12.7 pp under a build whose field
+dimension was set by raw signal magnitude — thousands of dimensions,
+degenerating birth geometry; both defects found by measurement,
+repaired, and the battery re-run — 2 November 2026. Under the
+corrected dynamics, the exposure learning curve at this scale is flat
+and the real topology scores below degree-matched random rewiring
+under hop-limited scoring — both reported as measured.)
 
 **2. One body, from ingress to egress (end-to-end, deterministic).**
 A single 20-round programme feeds facts, text, code, image and audio
@@ -43,9 +47,14 @@ and seed reproduce the run bit-for-bit.
 Whether chain-structured cultivation exceeds equal-volume unstructured
 exposure was written down as a test before it was run (200 symbols,
 6-link chains, ~3,600 facts, 15 seeds, three scoring instruments). The
-result was **+0.1 ± 2.6 pp** against a matched control. The curriculum
+result was **+0.0 ± 0.8 pp** against a matched control. The curriculum
 claim has been withdrawn; direction is attributed, on current evidence,
-to material selection and the Fate layer only.
+to material selection and the Fate layer only. A width variant
+(pre-declared joint criterion, 15 seeds, 2 November 2026) likewise did
+not establish topology specificity: hard-negative rejection rose
++23.8 pp (14/15 seeds) while true-pair path length never beat a
+degree-preserving shuffle (0/15) — recorded as not detected, with the
+component measurements published alongside (EVIDENCE_MAP D13).
 
 ## Evidence classification
 
@@ -54,7 +63,7 @@ to material selection and the Fate layer only.
   storage accounting; zero storage forgetting (BWT +0.0 pp); the
   consolidated end-to-end pipeline.
 - **Class B — reproduced, protocol-bounded:** industry-style battery
-  (5 seeds; storage 100%, network channel 54–76% by task family — task
+  (5 seeds; storage 100%, network channel 49–76% by task family — task
   analogues generated for this programme, not official datasets);
   spontaneous-organisation census at 25–150 MB (formation of opposed
   two-layer topologies; optimality not established, since degree-matched
@@ -101,7 +110,12 @@ Independent third-party replication has not yet taken place.
   — classification of every current claim (A: established; D: not to be
   claimed), with pointers to the runs behind each item.
 - [`evidence-20261101/TEST_RUNS_20261101.md`](evidence-20261101/TEST_RUNS_20261101.md)
-  — per-run records for the 1 November 2026 full-suite re-run.
+  — per-run records for the 1 November 2026 full-suite re-run, with the
+  saturation and field-dimension correction sections (2 November 2026).
+- [`evidence-20261101/ENTRY_FREEDOM_AND_E1W_20261101.md`](evidence-20261101/ENTRY_FREEDOM_AND_E1W_20261101.md)
+  — entry-freedom audit and repair (birth form decided at Fate
+  close-out), the field-dimension defect and its repair, and the
+  pre-registered width-cultivation test E1W with its verdict.
 - [`evidence-20261101/RUN_MODE.md`](evidence-20261101/RUN_MODE.md) and
   [`evidence-20261101/FULL_FLOW_RUNBOOK.md`](evidence-20261101/FULL_FLOW_RUNBOOK.md)
   — the consolidated run specification (four layers plus monitoring) and
@@ -115,12 +129,17 @@ Independent third-party replication has not yet taken place.
   Class B: sham control missing, strength post-hoc) and the two-phase
   plan to reproduce it on the Rust incubation body. An instrument
   correction (unified scoring budget, replacing a per-label budget)
-  and its 15-seed re-run are recorded in TEST_RUNS (E0 section): all
-  headline values were reproduced under the corrected instrument.
-- [`deck/Valhalla_Investor_Deck_EN_v1.2_20261101.pptx`](deck/Valhalla_Investor_Deck_EN_v1.2_20261101.pptx)
+  and its 15-seed re-run are recorded in TEST_RUNS (E0 section); a
+  second correction (field dimension estimated from signal dispersion
+  rather than magnitude) and its re-baseline followed on 2 November
+  2026 (TEST_RUNS, dimension section) — current values are those of
+  the principal results above.
+- [`deck/Valhalla_Investor_Deck_EN_v1.4_20261102.pptx`](deck/Valhalla_Investor_Deck_EN_v1.4_20261102.pptx)
   — the current technical report (29 slides, Scientific Edition):
   principal results first, experiments in full, evidence classification
-  and reporting standard included.
+  and reporting standard included. v1.4 re-baselines to the
+  field-dimension-corrected dynamics (2 November 2026) and reports
+  the E1W width test as not detected.
 
 ## Earlier documents (October 2026, retained as run)
 
